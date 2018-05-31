@@ -1,0 +1,31 @@
+.card {
+    background: #fff;
+    border-radius: 2px;
+    display: block;
+    position: relative;
+    width: 100%;
+    box-shadow: 0 19px 38px rgba(255, 143, 143, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
+    margin: 0 0 6rem 0;
+}
+
+.card__header {
+    display: block;
+    position: relative;
+    padding: 1rem 0;
+    border-bottom: 1px dotted $brand-secondary;
+    a {
+        text-align: right;
+        color: $brand-secondary;
+        text-decoration: underline;
+        &:hover {
+            color: darken($brand-secondary, 10);
+            cursor: pointer;
+        }
+    }
+}
+
+.card__body {
+    display: block;
+    position: relative;
+    
+}
