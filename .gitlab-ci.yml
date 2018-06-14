@@ -11,7 +11,8 @@ test:
   stage: test
   script:
     - CI=true npm test
-
+variables:
+    PUBLIC_URL: "/spendify"
 pages:
   stage: deploy
   script:
