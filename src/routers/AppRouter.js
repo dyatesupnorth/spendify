@@ -25,7 +25,7 @@ const Header = () => (
 
 
 const AppRouter = () => (
-    <BrowserRouter>
+    <BrowserRouter basename={process.env.PUBLIC_URL}>
     <div>
         <Header></Header>
         <Switch>
