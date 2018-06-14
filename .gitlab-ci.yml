@@ -10,4 +10,3 @@ pages:
     - public # mandatory, other folder won't work
   only:
   - master # or dev, the branch you want to publish
-  homepage: "https://dyatesupnorth.gitlab.io/spendify",
