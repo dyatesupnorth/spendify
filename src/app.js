@@ -8,12 +8,14 @@ import configureStore from './store/configureStore';
 import { addExpense } from './actions/expenses';
 import { setTextFilter } from './actions/filters';
 import {Provider } from 'react-redux';
- import getVisibleExpenses from './selectors/expenses';
+import getVisibleExpenses from './selectors/expenses';
+
+import 'normalize.css/normalize.css'
 import './styles/styles.scss';
 import 'react-dates/lib/css/_datepicker.css';
 
 const store = configureStore();
-console.log('test');
+console.log('tests');
 store.dispatch(addExpense({description: 'Water Bill', amount: 4000}));
 store.dispatch(addExpense({description: 'Gas Bill'}));
 store.dispatch(addExpense({description: 'Rent', amount: 10905}));
