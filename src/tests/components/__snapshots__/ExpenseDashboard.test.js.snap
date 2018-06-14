@@ -2,9 +2,7 @@
 
 exports[`should render Header correctly 1`] = `
 <div>
-  <p>
-    This is from my dashboard
-  </p>
+  <Connect(ExpenseSummary) />
   <Connect(ExpenseList) />
   <Connect(ExpenseListFilters) />
 </div>
