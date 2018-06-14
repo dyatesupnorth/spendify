@@ -1,7 +1,4 @@
 pages:
-  cache:
-    paths:
-    - node_modules/
   stage: deploy
   script:
   - npm install
