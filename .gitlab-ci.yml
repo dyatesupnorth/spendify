@@ -1,46 +1,16 @@
-image: node:latest
-stages:
-  - install
-  - build
-  - test
-  - deploy
-install_functions:
-  stage: install
-  only:
-    - staging
-    - production
-  script:
-    - echo "install_functions"
-install_client:
-  stage: install
-  only:
-    - staging
-    - production
-  script:
-    - echo "install_client"
-build_client:
-  stage: build
-  only:
-    - staging
-    - production
-  script:
-    - echo "build_client"
-test_client:
-  stage: test
-  only:
-    - staging
-    - production
-  script:
-    - echo "test_client"
-deploy_all_staging:
+pages:
+  cache:
+    paths:
+    - node_modules/
   stage: deploy
-  only:
-    - staging
   script:
-    - echo "deploy_all"
-deploy_all_production:
-  stage: deploy
+  - npm install
+  - npm run build
+  - rm -rf public
+  - mv build public
+  artifacts:
+    paths:
+    - public # mandatory, other folder won't work
   only:
-    - production
-  script:
-    - echo "deploy_all"
+  - master # or dev, the branch you want to publish
+  homepage: "https://dyatesupnorth.gitlab.io/spendify",
