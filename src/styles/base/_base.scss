@@ -11,14 +11,8 @@ body{
     font-size:1.6rem;
     background-image: linear-gradient(to top, #5ee7df 0%, #b490ca 100%) ;
     text-align:center;
-    font-family: $body-font;
 }
-#wrapper{
-   padding:1rem;  
-}
-h1,h2,h3,h4,h5{
-    color: $brand-primary;
-}
-h1{
-    font-size:1rem;
+
+.active{
+    font-weight: bold;
 }

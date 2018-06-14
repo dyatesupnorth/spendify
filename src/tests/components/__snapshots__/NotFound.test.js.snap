@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render Not Found correctly 1`] = `
+<div>
+  This is a 404! 
+  <NavLink
+    activeClassName="active"
+    ariaCurrent="true"
+    to="/"
+  >
+    Go home
+  </NavLink>
+</div>
+`;

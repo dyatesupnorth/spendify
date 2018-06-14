@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render Header correctly 1`] = `
+<div>
+  <p>
+    This is from my dashboard
+  </p>
+  <Connect(ExpenseList) />
+  <Connect(ExpenseListFilters) />
+</div>
+`;
