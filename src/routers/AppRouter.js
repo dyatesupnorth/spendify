@@ -1,42 +1,36 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import { BrowserRouter , Route, Switch, Link, NavLink} from 'react-router-dom';
+import { Router , Route, Switch, Link, NavLink} from 'react-router-dom';
+import createHistory from 'history/createBrowserHistory'
+
 import ExpenseDashboard from '../components/ExpenseDashboard';
+import LoginPage from '../components/LoginPage'
 import AddExpense from '../components/AddExpense';
 import EditExpense from '../components/EditExpense';
 import Help from '../components/Help';
 import NotFound from '../components/NotFound';
-
-
-
+import PrivateRoute from './PrivateRoute'
+export const history = createHistory();
 const HelpPage = () => (
     <p>This is the help page</p>
 )
 
-const Header = () => (
-    <header>
-        <h1>Expensify</h1>
-        <NavLink to="/" activeClassName="active" exact={true}>Go home</NavLink>
-        <NavLink to="/create" activeClassName="active">Create an Expense</NavLink>
-        <NavLink to="/edit/:id" activeClassName="active">Edit Expense</NavLink>
-        <NavLink to="/help" activeClassName="active">Help Page</NavLink>
-    </header>
-)
+
 
 
 const AppRouter = () => (
-    <BrowserRouter basename={process.env.PUBLIC_URL}>
+    <Router history={history} basename={process.env.PUBLIC_URL}>
     <div>
-        <Header></Header>
         <Switch>
-            <Route path="/" component={ExpenseDashboard} exact={true}/>
-            <Route path="/create" component={AddExpense} />
-            <Route path="/edit/:id" component={EditExpense} />
+            <Route path="/" component={LoginPage} exact={true}/>
+            <PrivateRoute path="/dashboard" component={ExpenseDashboard}/>
+            <PrivateRoute path="/create" component={AddExpense} />
+            <PrivateRoute path="/edit/:id" component={EditExpense} />
             <Route path="/help" component={Help} />
             <Route component={NotFound} />
 
         </Switch>
         </div>
-    </BrowserRouter>
+    </Router>
 )
 export default AppRouter;
