@@ -10,19 +10,14 @@ import EditExpense from '../components/EditExpense';
 import Help from '../components/Help';
 import NotFound from '../components/NotFound';
 import PrivateRoute from './PrivateRoute'
+import PublicRoute from "./PublicRoute";
 export const history = createHistory();
-const HelpPage = () => (
-    <p>This is the help page</p>
-)
-
-
-
 
 const AppRouter = () => (
     <Router history={history} basename={process.env.PUBLIC_URL}>
     <div>
         <Switch>
-            <Route path="/" component={LoginPage} exact={true}/>
+            <PublicRoute path="/" component={LoginPage} exact={true}/>
             <PrivateRoute path="/dashboard" component={ExpenseDashboard}/>
             <PrivateRoute path="/create" component={AddExpense} />
             <PrivateRoute path="/edit/:id" component={EditExpense} />
