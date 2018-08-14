@@ -14,7 +14,11 @@ import expenses from '../fixtures/expenses';
 import database from '../../firebase/firebase';
 
 const uid = 'thisismytestid';
-const defaultAuthState = {auth: { uid }};
+const defaultAuthState = {
+  auth: {
+    uid
+  }
+};
 const createMockStore = configureMockStore([thunk]);
 beforeEach((done) => {
   const expensesData = {}
