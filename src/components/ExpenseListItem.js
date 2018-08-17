@@ -23,7 +23,7 @@ numeral.register('locale', 'en-gb', {
 });
 numeral.locale('en-gb');
 export const ExpenseListItem = ({id, description, amount,createdAt}) => (
-    <div>
+    <div className="mt-1 border-bottom">
         <Link to={`/edit/${id}`}>
             <h3>{description}</h3>
         </Link>

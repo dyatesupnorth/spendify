@@ -1,9 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`should render AddExpense correctly 1`] = `
-<div>
+<div
+  className="container"
+>
   <h1>
-    Add Expense
+    Create An Expense
   </h1>
   <ExpenseForm
     onSubmit={[Function]}

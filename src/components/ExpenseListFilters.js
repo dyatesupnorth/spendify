@@ -26,27 +26,37 @@ export class ExpenseListFilters extends React.Component{
     }
     render() {
       return (
-        <div>
-        <input type="text" value={this.props.filters.text} onChange={this.onTextChange}/>
-        <select value={this.props.filters.sortBy} onChange={this.onSortChange}>
-            <option value="date">Date
-            </option>
-            <option value="amount">Amount
-            </option>
-        </select>
-
-        <DateRangePicker
-            startDate={this.props.filters.startDate} // momentPropTypes.momentObj or null,
-            startDateId="your_unique_start_date_id" // PropTypes.string.isRequired,
-            endDate={this.props.filters.endDate} // momentPropTypes.momentObj or null,
-            endDateId="your_unique_end_date_id" // PropTypes.string.isRequired,
-            onDatesChange={this.onDatesChange} // PropTypes.func.isRequired,
-            focusedInput={this.state.calendarFocused} // PropTypes.oneOf([START_DATE, END_DATE]) or null,
-            onFocusChange={this.onFocusChange} // PropTypes.func.isRequired,
-            showClearDates={true}
-            numberOfMonths={1}
-            isOutsideRange={() => false}
-        />
+        <div className="col-sm-12 col-md-4 p-3">
+        <h4>Filter</h4>
+        <hr/>
+        <div className="form-group">
+            <label>Name</label>
+            <input className="form-control" type="text" value={this.props.filters.text} onChange={this.onTextChange}/>
+        </div>
+        <div className="form-group">
+            <label>Sort by</label>
+            <select className="form-control" value={this.props.filters.sortBy} onChange={this.onSortChange}>
+                <option value="date">Date
+                </option>
+                <option value="amount">Amount
+                </option>
+            </select>
+        </div>
+        <div className="form-group">
+            <label>Select Date Range</label>
+            <DateRangePicker
+                startDate={this.props.filters.startDate} // momentPropTypes.momentObj or null,
+                startDateId="your_unique_start_date_id" // PropTypes.string.isRequired,
+                endDate={this.props.filters.endDate} // momentPropTypes.momentObj or null,
+                endDateId="your_unique_end_date_id" // PropTypes.string.isRequired,
+                onDatesChange={this.onDatesChange} // PropTypes.func.isRequired,
+                focusedInput={this.state.calendarFocused} // PropTypes.oneOf([START_DATE, END_DATE]) or null,
+                onFocusChange={this.onFocusChange} // PropTypes.func.isRequired,
+                showClearDates={true}
+                numberOfMonths={1}
+                isOutsideRange={() => false}
+            />
+        </div>
     </div>
       )
     }

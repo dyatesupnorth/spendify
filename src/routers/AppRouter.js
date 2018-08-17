@@ -15,15 +15,14 @@ export const history = createHistory();
 
 const AppRouter = () => (
     <Router history={history} basename={process.env.PUBLIC_URL}>
-    <div>
+    <div className="h-100">
         <Switch>
             <PublicRoute path="/" component={LoginPage} exact={true}/>
-            <PrivateRoute path="/dashboard" component={ExpenseDashboard}/>
+            <PrivateRoute className="container" path="/dashboard" component={ExpenseDashboard}/>
             <PrivateRoute path="/create" component={AddExpense} />
             <PrivateRoute path="/edit/:id" component={EditExpense} />
             <Route path="/help" component={Help} />
             <Route component={NotFound} />
-
         </Switch>
         </div>
     </Router>

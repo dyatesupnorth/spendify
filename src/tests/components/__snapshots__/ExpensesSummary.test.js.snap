@@ -1,35 +1,55 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`should correctly expenses summary with multiple expenses 1`] = `
-<div>
-  <p>
-    Expense Summary
-  </p>
-  <p>
-    Viewing 
-    4
-     
-    expenses
-     totalling 
-    $34,323.43
-    .
-  </p>
+<div
+  className="bg-dark text-white"
+>
+  <div
+    className="container p-3"
+  >
+    <h2>
+      Expense Summary
+    </h2>
+    <p>
+      Viewing 
+      <strong>
+        4
+      </strong>
+       
+      expenses
+       totalling 
+      <strong>
+        $34,323.43
+      </strong>
+      .
+    </p>
+  </div>
 </div>
 `;
 
 exports[`should correctly expenses summary with one expense 1`] = `
-<div>
-  <p>
-    Expense Summary
-  </p>
-  <p>
-    Viewing 
-    1
-     
-    expense
-     totalling 
-    $2.35
-    .
-  </p>
+<div
+  className="bg-dark text-white"
+>
+  <div
+    className="container p-3"
+  >
+    <h2>
+      Expense Summary
+    </h2>
+    <p>
+      Viewing 
+      <strong>
+        1
+      </strong>
+       
+      expense
+       totalling 
+      <strong>
+        $2.35
+      </strong>
+      .
+    </p>
+  </div>
 </div>
 `;

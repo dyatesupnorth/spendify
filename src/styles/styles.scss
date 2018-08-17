@@ -1,1 +1,35 @@
 @import './base/base';
+html,
+body {
+    height: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-family: 'Roboto Condensed', Sans-Serif;
+    font-size: 35px;
+}
+
+p {
+    font-family: 'Cabin', Sans-Serif;
+    font-size: 16px;
+}
+
+.navbar-brand {
+    font-family: 'Roboto Condensed', Sans-Serif;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.login-page {
+    background-image: url("https://source.unsplash.com/random");
+    /* Full height */
+    height: 100%;
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}

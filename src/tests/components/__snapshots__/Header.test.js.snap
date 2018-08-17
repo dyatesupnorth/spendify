@@ -1,42 +1,60 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`should render Header correctly 1`] = `
-<header>
-  <h1>
-    Expensify
-  </h1>
-  <NavLink
-    activeClassName="active"
-    ariaCurrent="true"
-    to="/dashboard"
+<div>
+  <Navbar
+    color="light"
+    expand="md"
+    light={true}
+    tag="nav"
   >
-    Go home
-  </NavLink>
-  <NavLink
-    activeClassName="active"
-    ariaCurrent="true"
-    to="/create"
-  >
-    Create an Expense
-  </NavLink>
-  <NavLink
-    activeClassName="active"
-    ariaCurrent="true"
-    to="/edit/:id"
-  >
-    Edit Expense
-  </NavLink>
-  <NavLink
-    activeClassName="active"
-    ariaCurrent="true"
-    to="/help"
-  >
-    Help Page
-  </NavLink>
-  <button
-    onClick={[Function]}
-  >
-    Logout
-  </button>
-</header>
+    <NavbarBrand
+      href="/"
+      tag="a"
+    >
+      Spendify
+    </NavbarBrand>
+    <Nav
+      className="navbar-nav ml-auto"
+      navbar={true}
+      tag="ul"
+      vertical={false}
+    >
+      <NavItem
+        tag="li"
+      >
+        <NavLink
+          activeClassName="active"
+          ariaCurrent="true"
+          className="nav-link"
+          to="/dashboard"
+        >
+          Go home
+        </NavLink>
+      </NavItem>
+      <NavItem
+        tag="li"
+      >
+        <NavLink
+          activeClassName="active"
+          ariaCurrent="true"
+          className="nav-link"
+          to="/create"
+        >
+          Create an Expense
+        </NavLink>
+      </NavItem>
+      <NavItem
+        tag="li"
+      >
+        <button
+          className="btn btn-info"
+          onClick={[Function]}
+        >
+          Logout
+        </button>
+      </NavItem>
+    </Nav>
+  </Navbar>
+</div>
 `;

@@ -1,7 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`should render EditExpense 1`] = `
-<div>
+<div
+  className="container"
+>
   <ExpenseForm
     expense={
       Object {
@@ -14,10 +16,20 @@ exports[`should render EditExpense 1`] = `
     }
     onSubmit={[Function]}
   />
-  <button
-    onClick={[Function]}
+  <hr />
+  <div
+    className="row"
   >
-    Remove
-  </button>
+    <div
+      className="col-sm-12"
+    >
+      <button
+        className="btn btn-danger"
+        onClick={[Function]}
+      >
+        Remove
+      </button>
+    </div>
+  </div>
 </div>
 `;

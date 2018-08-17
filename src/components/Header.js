@@ -2,16 +2,36 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 import {startLogout} from '../actions/auth';
 import {connect} from 'react-redux';
+import {
+  Collapse,
+  Navbar,
+  NavbarToggler,
+  NavbarBrand,
+  Nav,
+  NavItem
+ } from 'reactstrap';
 
 export const Header = ({startLogout}) => (
-  <header>
-    <h1>Expensify</h1>
-    <NavLink to="/dashboard" activeClassName="active" >Go home</NavLink>
-        <NavLink to="/create" activeClassName="active">Create an Expense</NavLink>
-        <NavLink to="/edit/:id" activeClassName="active">Edit Expense</NavLink>
-        <NavLink to="/help" activeClassName="active">Help Page</NavLink>
-    <button onClick={startLogout}>Logout</button>
-  </header>
+  <div>
+        <Navbar color="light" light expand="md">
+          <NavbarBrand href="/">Spendify</NavbarBrand>
+            <Nav className="navbar-nav ml-auto" navbar>
+              <NavItem >
+                <NavLink to="/dashboard" className="nav-link" activeClassName="active" >Go home</NavLink>
+        
+              </NavItem>
+              <NavItem>
+              <NavLink to="/create" className="nav-link" activeClassName="active">Create an Expense</NavLink>
+                    </NavItem>
+            
+              <NavItem>
+              <button className="btn btn-info" onClick={startLogout}>Logout</button>  
+
+              </NavItem>
+            </Nav>
+        </Navbar>
+      </div>
+ 
 )
 const mapDispatchToProps = (dispatch) => ({
     startLogout: () => dispatch(startLogout())
